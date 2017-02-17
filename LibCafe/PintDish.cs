@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibCafe
 {
-    public delegate void PintStartedHandler(object sender, EventArgs e);
-
     public class PintDish
     {
-        public event PintStartedHandler PintStarted;
+        public EventHandler PintStarted;
         private int pintCount;
 
         public int PintCount { get { return pintCount; } } // c#6.0 enkel get in property: set enkel in constructor
