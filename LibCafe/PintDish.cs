@@ -2,9 +2,11 @@
 
 namespace LibCafe
 {
+    public delegate void PintStartedHandler(object sender, EventArgs e);
+
     public class PintDish
     {
-        public EventHandler PintStarted;
+        public event PintStartedHandler PintStarted;
         private int pintCount;
 
         public int PintCount { get { return pintCount; } } // c#6.0 enkel get in property: set enkel in constructor
